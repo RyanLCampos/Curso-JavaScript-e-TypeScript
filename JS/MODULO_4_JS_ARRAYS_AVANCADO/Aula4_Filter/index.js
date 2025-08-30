@@ -1,13 +1,4 @@
 /*
-    FILTER
-
-    Parametros -> (
-    
-    
-    )
-*/
-
-/*
     function callBackFilter(valorElemento, indiceDoValor, arrayCompleto) {
         Implementacao de Codigo...
     }
