@@ -4,7 +4,8 @@
   --text-light: #666; /* texto secundário */
   --card-bg: #fff; /* fundo do card */
   --border: #ddd; /* borda leve */
-  --accent: #0077ff; /* cor de destaque */
+  --green: #24b83c;
+  --green-dark: #1a882c;
 }
 
 body {
@@ -23,8 +24,14 @@ header {
 }
 
 header a {
-    text-decoration: none;
-    font-size: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--green);
+}
+
+header a:hover {
+  color: var(--green-dark);
+  font-weight: 500;
 }
 
 h1 {
@@ -75,15 +82,10 @@ main {
 }
 
 .card a {
-  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2rem;
-  color:#24b83c;
-}
-
-.card a:hover {
-  text-decoration: underline;
+  color:var(--green);
 }
 
 .card p {
