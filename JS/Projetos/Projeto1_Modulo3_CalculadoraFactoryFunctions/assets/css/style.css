@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #207AA3;
-    --primary-color-dark: #154961;
-    --bg-color: #f4f7f9;
-    --btn-bg: #e9eef2;
-    --btn-hover: #d6dee5;
-    --btn-accent: #207AA3;
-    --btn-accent-hover: #154961;
+  --bg-color: #a3c9cc;       
+  --card-bg: #fff;            
+  --btn-bg: #fff;             
+  --btn-hover: #ebebeb;       
+  --btn-accent: #0077ff;      
+  --btn-accent-hover: #005ecc; 
+  --btn-del: #ff6b6b;         
+  --btn-del-hover: #e63946;   
+  --text: #333;               
+  --text-light: #666;         
 }
 
 * {
@@ -23,11 +26,12 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  color: #333;
+  background: var(--bg-color);
+  color: var(--text);
 }
 
 .container {
-  background: #fff;
+  background: var(--card-bg);
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -54,10 +58,12 @@ h1 {
   font-size: 2rem;
   text-align: right;
   border: none;
-  background: var(--bg-color);
+  color: var(--text);
+  border-color: #f0f0f0;
   padding: 10px 15px;
   border-radius: 10px;
   margin-bottom: 15px;
+  background: #f8f8f8;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.459);
 }
 
@@ -75,6 +81,7 @@ h1 {
 
 .btn-num {
   background: var(--btn-bg);
+  color: var(--text);
 }
 
 .btn-num:hover {
@@ -83,22 +90,22 @@ h1 {
 
 .btn-clear,
 .btn-del {
-  background: #ff6b6b;
+  background: var(--btn-del);
   color: #fff;
 }
 
 .btn-clear:hover,
 .btn-del:hover {
-  background: #e63946;
+  background: var(--btn-del-hover);
 }
 
 .btn-eq {
-  background: #09c979;
+  background: var(--btn-accent);
   color: #fff;
 }
 
 .btn-eq:hover {
-  background: #079258;
+  background: var(--btn-accent-hover);
 }
 
 
