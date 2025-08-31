@@ -1,0 +1,99 @@
+:root {
+  --bg: #f5f5f5; /* fundo claro */
+  --text: #333; /* texto principal */
+  --text-light: #666; /* texto secundário */
+  --card-bg: #fff; /* fundo do card */
+  --border: #ddd; /* borda leve */
+  --accent: #0077ff; /* cor de destaque */
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: var(--text);
+}
+
+.texto-acima-dos-projetos p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.texto-acima-dos-projetos {
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.8rem;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
