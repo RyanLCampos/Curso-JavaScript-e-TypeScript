@@ -1,6 +1,6 @@
 # 📘 Curso de JavaScript e TypeScript do básico ao avançado
 
-Repositório criado para armazenar exercícios e projetos desenvolvidos durante o curso **JavaScript e TypeScript do básico ao avançado (JS/TS)**.
+Repositório criado para armazenar exercícios e projetos desenvolvidos durante o curso **[JavaScript e TypeScript do básico ao avançado (JS/TS)](https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/)**.
 
 ---
 
