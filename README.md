@@ -14,7 +14,7 @@ Acesse a Landing Page com todos os projetos do curso pelo GitHub Pages:
 - [**Fundamentos**](./JS/MODULO_1_JS_BASICO_INICIANTES/) ➜ variáveis, tipos primitivos, operadores, arrays e objetos  
 - [**Lógica de Programação**](./JS/MODULO_2_JS_LOGICA_PROGRAMACAO/) ➜ condicionais, loops, switch/case  
 - [**Funções**](./JS/MODULO_3_JS_FUNCOES_AVANCADO/) ➜ arrow functions, callbacks, closures, factory e construtoras  
-- [**Arrays e Objetos**](./JS/MODULO_4_JS_ARRAYS_AVANCADO/) ➜ métodos (`map`, `filter`, `reduce`, `forEach`)
+- [**Arrays**](./JS/MODULO_4_JS_ARRAYS_AVANCADO/) ➜ métodos (`map`, `filter`, `reduce`, `forEach`)
 - [**Objetos**](./JS/Modulo_5_JS_OBJETOS_PROTOTYPES_AVANCADO/) ➜ criação e manipulação, `Object.defineProperty`, `Object.defineProperties`    
 - [**Projetos**](./projetos)
 
