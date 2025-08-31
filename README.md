@@ -5,7 +5,7 @@ Repositório criado para armazenar exercícios e projetos desenvolvidos durante 
 ---
 
 ## 🚀 Portfólio de Projetos
-Acesse a Landing Page com todos os projetos do curso pelo GitHub Pages:  
+Acesse o portfólio com todos os projetos do curso pelo GitHub Pages:  
 👉 **[Visualizar Portfólio](https://ryanlcampos.github.io/Curso-JavaScript-e-TypeScript/)**
 
 ---
