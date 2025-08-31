@@ -16,7 +16,7 @@ Acesse o portfólio com todos os projetos do curso pelo GitHub Pages:
 - [**Funções**](./JS/MODULO_3_JS_FUNCOES_AVANCADO/) ➜ arrow functions, callbacks, closures, factory e construtoras  
 - [**Arrays**](./JS/MODULO_4_JS_ARRAYS_AVANCADO/) ➜ métodos (`map`, `filter`, `reduce`, `forEach`)
 - [**Objetos**](./JS/Modulo_5_JS_OBJETOS_PROTOTYPES_AVANCADO/) ➜ criação e manipulação, `Object.defineProperty`, `Object.defineProperties`    
-- [**Projetos**](./projetos)
+- [**Projetos**](./JS/Projetos/)
 
 ---
 
