@@ -3,23 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modelo</title>
+    <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <section class="container">
-      <h1>Lista de Tarefas</h1>
+    <header>
+      <h1>📝 Lista de Tarefas</h1>
+      <a href="../../../../index.html">⬅ Voltar ao Portfólio</a>
+    </header>
 
-      <p class="input-wrapper">
-        <input type="text" class="input-tarefa" placeholder="Digite uma nova tarefa..." maxlength="40" >
-        <button class="btn-add-tarefa">Adicionar</button>
-        <button class="btn-remover-todos">Apagar Todos</button>
-      </p>
+    <main>
+      <section class="container">
+        <h2>Gerencie suas tarefas</h2>
 
-      <ul class="tarefas">
-        
-      </ul>
-    </section>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            class="input-tarefa"
+            placeholder="Digite uma nova tarefa..."
+            maxlength="40"
+          />
+          <button class="btn btn-add-tarefa">Adicionar</button>
+          <button class="btn btn-remover-todos">Apagar Todos</button>
+        </div>
+
+        <ul class="tarefas"></ul>
+      </section>
+    </main>
+
+    <div class="popup-overlay hidden">
+      <div class="popup">
+        <p>Quer realmente apagar todas as tarefas?</p>
+        <div class="popup-buttons">
+          <button class="btn popup-confirm">Sim</button>
+          <button class="btn popup-cancel">Não</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 — Feito por Ryan Lucas</p>
+    </footer>
 
     <script src="./assets/js/main.js"></script>
   </body>

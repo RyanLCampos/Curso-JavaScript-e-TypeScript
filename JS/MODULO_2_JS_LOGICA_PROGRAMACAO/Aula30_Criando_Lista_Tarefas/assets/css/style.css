@@ -1,77 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
 :root {
-  --bg: #d1d1d1;        
-  --text: #333;         
-  --text-light: #666;   
-  --card-bg: #fff;      
-  --border: #ddd;       
+  --bg: #f5f5f5; 
+  --text: #333;
+  --text-light: #666;
+  --card-bg: #fff;
+  --border: #ddd;
   --green: #24b83c;
   --green-dark: #1a882c;
-  --focus: #15501f83;
+  --red: #d9534f;
+  --red-dark: #b52b27;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  font-family: "Fira Code", "Inter", "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
   background: var(--bg);
-  font-family: "Fira Code", "Inter", "Segoe UI", sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
   color: var(--text);
 }
 
-.container {
-  max-width: 640px;
-  margin: 50px auto;
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--green);
+}
+
+header a:hover {
+  color: var(--green-dark);
 }
 
 h1 {
-  margin-top: 0;
-  margin-bottom: 25px;
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+
+.container {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  max-width: 600px; /* Aumentei a largura */
+  width: 100%;
   text-align: center;
-  font-size: 2rem;
-  color: var(--text);
-  font-weight: 700;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: var(--text-light);
 }
 
 .input-wrapper {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .input-tarefa {
   flex: 1;
-  padding: 10px;
+  padding: 10px 15px;
   font-size: 1rem;
-  border: 2px solid var(--border);
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.2s;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.input-tarefa:focus {
-  border: 2px solid var(--focus);
-}
-
-.input-tarefa::placeholder {
-  color: var(--text-light);
-  font-style: italic;
-}
-
-.btn-add-tarefa,
-.btn-remover-todos {
-  padding: 10px 16px;
+.btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
   border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease-in-out;
-  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: scale(0.95);
 }
 
 .btn-add-tarefa {
@@ -81,75 +108,126 @@ h1 {
 
 .btn-add-tarefa:hover {
   background: var(--green-dark);
-  transform: translateY(-2px);
 }
 
 .btn-remover-todos {
-  background: #e74c3c;
+  background: var(--red);
   color: #fff;
 }
 
 .btn-remover-todos:hover {
-  background: #c0392b;
-  transform: translateY(-2px);
+  background: var(--red-dark);
+}
+
+.tarefas .btn-remover { 
+  padding: 10px;
 }
 
 .tarefas {
   list-style: none;
-  margin: 20px 0 0;
-  padding: 0 15px;
-  max-height: 400px;
-  overflow-y: auto;
-  font-weight: 800;
+  padding: 0;
+  margin: 0;
+  max-height: 400px; 
+  overflow-y: auto;   
 }
 
-.tarefas::-webkit-scrollbar {
-  width: 10px;
-}
-.tarefas::-webkit-scrollbar-track {
-  background: #eee;
-  border-radius: 6px;
-}
-.tarefas::-webkit-scrollbar-thumb {
-  background: var(--green);
-  border-radius: 6px;
-}
-.tarefas::-webkit-scrollbar-thumb:hover {
-  background: var(--green-dark);
-}
-
-.item-tarefa {
+.tarefas li {
+  background: #f8f8f8;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: 13px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 14px;
-  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tarefas li button {
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tarefas li button:hover {
+  background: var(--red-dark);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-overlay.hidden {
+  display: none;
+}
+
+
+.popup {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 350px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.popup p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.popup-buttons .btn {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.popup-confirm {
+  background: var(--red);
+  color: #fff;
+}
+
+.popup-confirm:hover {
+  background: var(--red-dark);
+}
+
+.popup-cancel {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  transition: transform 0.15s, box-shadow 0.15s;
+  color: var(--text);
 }
 
-.item-tarefa:hover {
-  margin-top: 5px;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 2px solid var(--focus);
-}
-
-.btn-remover {
-  padding: 9px;
-  border: none;
-  border-radius: 4px;
-  background: #e74c3c;
-  color: #fff;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease-in-out;
-  font-weight: 600;
-}
-
-.btn-remover:hover {
-  background: #c0392b;
-  transform: translateY(-2px);
+.popup-cancel:hover {
+  background: #f0f0f0;
 }

@@ -1,49 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
 :root {
-  --bg-color: #a3c9cc;       
-  --card-bg: #fff;            
-  --btn-bg: #fff;             
-  --btn-hover: #ebebeb;       
-  --btn-accent: #0077ff;      
-  --btn-accent-hover: #005ecc; 
-  --btn-del: #ff6b6b;         
-  --btn-del-hover: #e63946;   
-  --text: #333;               
-  --text-light: #666;         
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  --bg: #f5f5f5; 
+  --text: #333;
+  --text-light: #666;
+  --card-bg: #fff;
+  --border: #ddd;
+  --green: #24b83c;
+  --green-dark: #1a882c;
+  --red: #d9534f;
+  --red-dark: #b52b27;
+  --blue: #0077ff;
+  --blue-dark: #005ecc;
 }
 
 body {
-  background: linear-gradient(135deg, #207AA3, #154961);
-  font-family: 'Open Sans', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: var(--bg-color);
+  font-family: "Fira Code", "Inter", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
   color: var(--text);
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--green);
+}
+
+header a:hover {
+  color: var(--green-dark);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
 }
 
 .container {
   background: var(--card-bg);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   max-width: 400px;
   width: 100%;
 }
 
-h1 {
+.container h2 {
   text-align: center;
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: var(--primary-color-dark);
+  margin-bottom: 1.2rem;
+  color: var(--text-light);
 }
 
 .calculadora {
@@ -53,18 +72,16 @@ h1 {
 }
 
 .display {
-  width: 100%;
+  width: 92%;
   height: 70px;
   font-size: 2rem;
   text-align: right;
-  border: none;
-  color: var(--text);
-  border-color: #f0f0f0;
+  border: 1px solid var(--border);
   padding: 10px 15px;
   border-radius: 10px;
   margin-bottom: 15px;
-  background: #f8f8f8;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.459);
+  background: #fafafa;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
@@ -75,40 +92,49 @@ h1 {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384);
+  transition: background 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-num {
-  background: var(--btn-bg);
+  background: var(--card-bg);
   color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .btn-num:hover {
-  background: var(--btn-hover);
+  background: #f0f0f0;
 }
 
 .btn-clear,
 .btn-del {
-  background: var(--btn-del);
+  background: var(--red);
   color: #fff;
 }
 
 .btn-clear:hover,
 .btn-del:hover {
-  background: var(--btn-del-hover);
+  background: var(--red-dark);
 }
 
 .btn-eq {
-  background: var(--btn-accent);
+  background: var(--blue);
   color: #fff;
 }
 
 .btn-eq:hover {
-  background: var(--btn-accent-hover);
+  background: var(--blue-dark);
 }
-
 
 .btn:active {
   transform: scale(0.95);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
 }

@@ -3,21 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modelo</title>
+    <title>Temporizador</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <section class="container">
-      <h1>Meu Timer</h1>
-      <div>
-        <h2 id="timer">00:00:00</h2>
-      </div>
-      <div>
-        <button class="iniciar">Iniciar</button>
-        <button class="pausar">Pausar</button>
-        <button class="zerar">Zerar</button>
-      </div>
-    </section>
+    <header>
+      <h1>⏱ Temporizador</h1>
+      <a href="../../../../index.html">⬅ Voltar ao Portfólio</a>
+    </header>
+
+    <main>
+      <section class="container">
+        <!-- Display do timer -->
+        <div class="timer-display">
+          <h2 id="timer">00:00:00</h2>
+        </div>
+
+        <!-- Botões -->
+        <div class="timer-buttons">
+          <button class="btn iniciar">Iniciar</button>
+          <button class="btn pausar">Pausar</button>
+          <button class="btn zerar">Zerar</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 — Feito por Ryan Lucas</p>
+    </footer>
 
     <script src="./assets/js/main.js"></script>
   </body>

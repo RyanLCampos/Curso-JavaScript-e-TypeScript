@@ -1,63 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
 :root {
-    --primary-color: rgb(32, 122, 163);
-    --primary-color-darker:rgb(21, 73, 97);
+  --bg: #f5f5f5; 
+  --text: #333;
+  --text-light: #666;
+  --card-bg: #fff;
+  --border: #ddd;
+  --green: #24b83c;
+  --green-dark: #1a882c;
+  --red: #d9534f;
+  --red-dark: #b52b27;
+  --blue: #0077ff;
+  --blue-dark: #005ecc;
 }
 
 * {
   box-sizing: border-box;
-  outline: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  font-family: "Fira Code", "Inter", "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
-  background: var(--primary-color);
-  font-family: 'Open sans', sans-serif;
-  font-size: 1.3em;
-  line-height: 1.5em;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--green);
+}
+
+header a:hover {
+  color: var(--green-dark);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
 }
 
 .container {
-    max-width: 640px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
 }
 
-.container h1 {
-    color: var(--primary-color-darker);
-    text-align: center;
+.timer-display {
+  margin: 20px 0;
 }
 
-div{
-    display: flex;
-    color: var(--primary-color-darker);
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+#timer {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text);
+  background: #f8f8f8;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  min-width: 220px;
 }
 
-button {
-    border: none;
-    background: var(--primary-color);
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    height: 45px;
-    width: 25%;
-    margin: 3% auto 3% 5%;
-    cursor: pointer;
-    border-radius: 10px;
+.timer-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
 }
 
-button:hover {
-    background: var(--primary-color-darker);
+.btn {
+  flex: 1;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.pausado {
-    color: red;
+.btn:active {
+  transform: scale(0.95);
 }
- 
+
+.iniciar {
+  background: var(--blue);
+  color: #fff;
+}
+
+.iniciar:hover {
+  background: var(--blue-dark);
+}
+
+.pausar {
+  background: var(--red);
+  color: #fff;
+}
+
+.pausar:hover {
+  background: var(--red-dark);
+}
+
+.zerar {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.zerar:hover {
+  background: #f0f0f0;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}

@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🧮 Calculadora</h1>
+    <a href="../../../../index.html">⬅ Voltar ao Portfólio</a>
+  </header>
+
+  <main>
     <section class="container">
-      <h1>Calculadora</h1>
       <table class="calculadora">
         <tr>
-          <td colspan="4"><input type="text" class="display"></td>
+          <td colspan="4"><input type="text" class="display" readonly></td>
         </tr>
 
         <tr>
@@ -49,9 +54,13 @@
           <td><button class="btn btn-eq">=</button></td>
         </tr>
       </table>
-
     </section>
+  </main>
 
-    <script src="./assets/js/main.js"></script>
-  </body>
+  <footer>
+    <p>© 2025 — Feito por Ryan Lucas</p>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
 </html>
