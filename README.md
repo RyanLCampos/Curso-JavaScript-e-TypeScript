@@ -15,7 +15,9 @@ Acesse o portfólio com todos os projetos do curso pelo GitHub Pages:
 - [**Lógica de Programação**](./JS/MODULO_2_JS_LOGICA_PROGRAMACAO/) ➜ condicionais, loops, switch/case  
 - [**Funções**](./JS/MODULO_3_JS_FUNCOES_AVANCADO/) ➜ arrow functions, callbacks, closures, factory e construtoras  
 - [**Arrays**](./JS/MODULO_4_JS_ARRAYS_AVANCADO/) ➜ métodos (`map`, `filter`, `reduce`, `forEach`)
-- [**Objetos**](./JS/Modulo_5_JS_OBJETOS_PROTOTYPES_AVANCADO/) ➜ criação e manipulação, `Object.defineProperty`, `Object.defineProperties`    
+- [**Objetos**](./JS/Modulo_5_JS_OBJETOS_PROTOTYPES_AVANCADO/) ➜ criação e manipulação, `Object.defineProperty`, `Object.defineProperties`
+- [**Classes (POO)**](./JS/Modulo_6_JS_CLASSES_POO/) ➜ criação de classes, getters/setters, herança, métodos de instância e estáticos
+- [**JavaScript Assíncrono**](./JS/Modulo_7_JS_ASSINCRONO/) ➜ Promises, métodos úteis para Promises, async/await, XMLHttpRequest, Fetch API, Axios
 - [**Projetos**](./JS/Projetos/)
 
 ---
