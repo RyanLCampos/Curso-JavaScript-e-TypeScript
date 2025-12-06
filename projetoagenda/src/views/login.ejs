@@ -1,0 +1,55 @@
+<%- include('includes/head') %>
+<%- include('includes/navbar') %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-8 my-4">
+                <h1 class="text-center">Login</h1>
+                <p class="text-center lead">Faça login ou cadastre-se abaixo!</p>
+
+                <div class="row">
+                    <div class="col-lg me-5">
+                        <h4>Faça seu cadastro</h4>
+                        <p>Caso não tenha uma conta, cadastre-se abaixo!</p>
+                        <form action="/login/register" method="POST">
+                            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                            <div class="form-group my-4">
+                                <label>E-mail</label>
+                                <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group my-4">
+                                <label>Senha</label>
+                                <input type="password" class="form-control" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-primary my-4">Cadastrar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="col-lg ms-5">
+                        <h4>Entrar no sistema</h4>
+                        <p>Se já tem uma conta, entre agora!</p>
+                        <form action="/login/login" method="POST">
+                            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                            <div class="form-group my-4">
+                                <label>E-mail</label>
+                                <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group my-4">
+                                <label>Senha</label>
+                                <input type="password" class="form-control" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-primary my-4">Logar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+<%- include('includes/footer') %>
+
+   
