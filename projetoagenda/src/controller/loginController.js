@@ -20,7 +20,7 @@ exports.register = async function(req, res) {
 
         req.flash('success', 'Cadastrado com sucesso!');
         req.session.save(function() { // Salva a sessão
-            return res.redirect('/login');     // Call back para a pagina home
+            return res.redirect('/');     // Call back para a pagina home
         });
     }catch (e) {
         console.log(e);
