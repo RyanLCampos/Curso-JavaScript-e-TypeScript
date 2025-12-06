@@ -1,9 +1,12 @@
 require('dotenv').config();
 
-// Imports
+/* ====== ====== IMPORTS ====== ====== */
+
+// Inicia express
 const express = require('express');
 const routes = require('./routes');
-const { middlewareGlobal, outroMiddleware, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
+
+const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const helmet = require('helmet');
