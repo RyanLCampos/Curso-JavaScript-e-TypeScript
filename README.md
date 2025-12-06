@@ -20,6 +20,7 @@ Acesse o portfólio com todos os projetos do curso pelo GitHub Pages:
 | [**Objetos**](./JS/MODULO_5_JS_OBJETOS_PROTOTYPES_AVANCADO/) | criação e manipulação, `Object.defineProperty`, `Object.defineProperties`, getters/setters, prototypes, herança, polimorfismo, factory + prototypes, `Map` |
 | [**Classes (POO)**](./JS/MODULO_6_JS_CLASSES_POO/) | criação de classes, getters/setters, herança, métodos de instância e estáticos |
 | [**JavaScript Assíncrono**](./JS/MODULO_7_JS_ASSINCRONO/) | Promises, métodos úteis, async/await, XMLHttpRequest, Fetch API, Axios |
+| [**JavaScript - Node, Npm, Express e MongoDB (NodeJS)**](./NODE/MODULO_8_NODE_NPM_EXPRESS_MONGODB/) | Módulos, NPM, File System (FS), Express (rotas, controllers, views), middlewares, MongoDB/Mongoose, sessões, flash messages, segurança (Helmet/CSRF) |
 | [**Projetos**](./JS/Projetos/) | – |
 
 ---
@@ -28,6 +29,7 @@ Acesse o portfólio com todos os projetos do curso pelo GitHub Pages:
 - JavaScript (ES6+)  
 - Node.js  
 - HTML5 e CSS3
+- MongoDB
   
 ---
 
