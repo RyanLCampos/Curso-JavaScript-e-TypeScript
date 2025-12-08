@@ -25,10 +25,41 @@ exports.create = async function(req, res){
     }
 };
 
-exports.edit = async function(req, res) {
-    const contato = await Contato.buscaPorId(req.params.id);
-
-    if (!contato) return res.render('404');
-
-    res.render('contato', { contato });
+exports.editIndex = async function(req, res) {
+    try {
+        if(!req.params.id) return res.render('404');
+    
+        const contato = await Contato.buscaPorId(req.params.id);
+        
+        if (!contato) return res.render('404');
+    
+        res.render('contato', { contato });
+    } catch (e) {
+        console.log(e);
+        return res.render('404');
+    }
 };
+
+exports.edit = async function (req, res) {
+    try {
+        if (!req.params.id) return res.render('404');
+        
+        const contato = new Contato(req.body);
+    
+        await contato.edit(req.params.id);
+
+        if(contato.errors.length > 0) {
+            console.log('Entrou aqui!');
+            req.flash('errors', contato.errors);
+            req.session.save(() => res.redirect(`/contato/${req.params.id}`));
+            return;
+        }
+
+        req.flash('success', 'Contato atualizado com sucesso!');
+        req.session.save(() => res.redirect(`/contato/${req.params.id}`));
+        return;
+    } catch (e) {
+        console.log(e);
+        return res.render('404');
+    }
+}

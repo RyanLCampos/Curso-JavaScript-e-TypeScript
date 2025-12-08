@@ -19,9 +19,9 @@ exports.register = async function(req, res) {
             return;
         }
 
-        req.flash('success', 'Cadastrado com sucesso!');
+        req.flash('success', 'Cadastrado com sucesso!\nFaça login para acessar o sistema');
         req.session.save(function() { // Salva a sessão
-            return res.redirect('/');     // Call back para a pagina home
+            return res.redirect('/login');     // Call back para a pagina anterior
         });
     }catch (e) {
         console.log(e);
