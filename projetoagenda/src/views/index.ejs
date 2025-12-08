@@ -7,20 +7,33 @@
 
             <div class="col-lg-8 my-4">
                 <h1 class="text-center">Agenda</h1>
-                <p class="text-center lead">Seus contatos estão abaixo</p>
 
                 <%- include('includes/messages') %>
-
-                <div class="responsive-table">
-                    <table class="table my-4">
-                        <tr>
-                            <td>Ryan</td>
-                            <td>Campos</td>
-                            <td>18513216516</td>
-                            <td>ryan@email.com</td>
-                        </tr>
-                    </table>
-                </div>
+                <% if(!contatos.length > 0) { %>
+                    <div class="my-5 py-5">
+                        <p class="text-center lead">Não há nenhum contato cadastrado!</p>
+                    </div>
+                    <div class="text-center my-4">
+                        <a href="/contato" class="btn btn-primary btn-lg">
+                            Cadastrar Contato
+                        </a>
+                    </div>
+                <% } else { %>
+                    <div class="responsive-table my-5">
+                        <table class="table my-4">
+                            <% contatos.forEach(contato => { %>
+                                <tr>
+                                    <td><%= contato.nome %></td>
+                                    <td><%= contato.sobrenome %></td>
+                                    <td><%= contato.email %></td>
+                                    <td><%= contato.telefone %></td>
+                                    <td><a href="/contato/<%= contato._id %>">Editar</a></td>
+                                    <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
+                                </tr>
+                            <% }); %>
+                        </table>
+                    </div>
+                <% } %>
                 
             </div>
 
