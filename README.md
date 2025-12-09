@@ -21,6 +21,8 @@ Acesse o portfólio com todos os projetos do curso pelo GitHub Pages:
 | [**Classes (POO)**](./JS/MODULO_6_JS_CLASSES_POO/) | criação de classes, getters/setters, herança, métodos de instância e estáticos |
 | [**JavaScript Assíncrono**](./JS/MODULO_7_JS_ASSINCRONO/) | Promises, métodos úteis, async/await, XMLHttpRequest, Fetch API, Axios |
 | [**JavaScript - Node, Npm, Express e MongoDB (NodeJS)**](./NODE/MODULO_8_NODE_NPM_EXPRESS_MONGODB/) | Módulos, NPM, File System (FS), Express (rotas, controllers, views), middlewares, MongoDB/Mongoose, sessões, flash messages, segurança (Helmet/CSRF) |
+| [**Projeto Agenda (Node, Express, MongoDB)**](./projetoagenda/) | Template EJS, CRUD Usuários, Bcryptjs, validator (validação de campos) |
+| [**Linux - Deploy da Aplicação e segurança**](./projetoagenda/)| Google Cloud Platform, Chaves SSH, Git Servidor, Node.js e PM2 (Servidor), configuração do NGINX como proxy reverso, deploy do site) |
 | [**Projetos**](./JS/Projetos/) | – |
 
 ---
