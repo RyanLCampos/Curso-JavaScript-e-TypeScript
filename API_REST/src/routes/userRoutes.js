@@ -6,11 +6,25 @@ import loginRequired from '../middlewares/loginRequired';
 
 const router = new Router();
 
-router.get('/', loginRequired, userController.index);
+// Rotas que não deveriam existir, pois expõem informações gerais
+// router.get('/', userController.index);
+// router.get('/informacoes', loginRequired, userController.show);
+
+// Rotas permitidas, pois não expõem dados de terceiros
+
 router.post('/', userController.create);
-router.get('/:id', userController.show);
-router.put('/:id', userController.update);
-router.delete('/:id', userController.delete);
+
+/*
+  Removido :id — usuário só atualiza a si mesmo.
+  router.put('/:id', userController.update);
+*/
+router.put('/', loginRequired, userController.update);
+
+/*
+  Removido :id — usuário só exclui a si mesmo.
+  router.delete('/:id', userController.delete);
+*/
+router.delete('/', loginRequired, userController.delete);
 
 export default router;
 
