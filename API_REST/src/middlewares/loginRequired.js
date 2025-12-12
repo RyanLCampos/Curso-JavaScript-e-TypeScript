@@ -5,7 +5,7 @@ export default async (req, res, next) => {
   const { authorization } = req.headers;
 
   if (!authorization) {
-    res.status(401).json({
+    return res.status(401).json({
       errors: ['Login required'],
     });
   }
@@ -22,7 +22,7 @@ export default async (req, res, next) => {
     });
 
     if (!user) {
-      res.status(401).json({
+      return res.status(401).json({
         errors: ['Usuário inválido.'],
       });
     }
