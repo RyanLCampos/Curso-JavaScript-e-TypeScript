@@ -21,6 +21,6 @@ module.exports = {
     'react',
   ],
   rules: {
-    "react/jsx-filename-extension": 0,
+    'react/jsx-filename-extension': 0,
   },
 };
