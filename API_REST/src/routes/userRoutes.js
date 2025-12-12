@@ -12,7 +12,7 @@ const router = new Router();
 
 // Rotas permitidas, pois não expõem dados de terceiros
 
-router.post('/', userController.create);
+router.post('/', loginRequired, userController.create);
 
 /*
   Removido :id — usuário só atualiza a si mesmo.
