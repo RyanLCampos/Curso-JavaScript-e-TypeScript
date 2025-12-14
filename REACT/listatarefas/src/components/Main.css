@@ -8,7 +8,7 @@
 }
 
 .main h1 {
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -25,6 +25,7 @@
   font-size: 20px;
   border: 1px solid #ccc;
   min-width: 80%;
+  border-radius: 4px 0 0 4px;
 }
 
 .form button[type="submit"] {
@@ -36,10 +37,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0 4px 4px 0;
 }
 
 .tarefas {
   margin-top: 30px;
+  font-size: 18px;
 }
 
 .tarefas li {
@@ -75,4 +78,9 @@
 .tarefas li .delete {
   cursor: pointer;
   transition: all 200ms;
+}
+
+.tarefas li span {
+  display: flex;
+  align-items: center;
 }
