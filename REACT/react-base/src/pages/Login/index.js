@@ -12,7 +12,7 @@ export default function Login() {
         <small>Oie</small>
       </Title>
       <Paragrafo>Lorem ipsum dolor sit amet.</Paragrafo>
-      <a href="">oi</a>
+      <button type="Button">Enviar</button>
     </Container>
   );
 }
