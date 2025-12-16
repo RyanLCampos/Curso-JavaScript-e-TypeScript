@@ -1,16 +1,21 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-import Login from './pages/Login/index';
 import GlobalStyle from './styles/GlobalStyles';
 import Header from './components/header';
+
+import Routes from './routes';
+
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Header />
-      <Login />
-      <GlobalStyle />
+      <BrowserRouter>
+        <Header />
+        <Routes />
+        <GlobalStyle />
+      </BrowserRouter>
     </>
   );
 }
