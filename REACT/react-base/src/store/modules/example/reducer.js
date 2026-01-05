@@ -6,12 +6,25 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case types.BOTAO_CLICADO: {
+    case types.BOTAO_CLICADO_SUCCESS: {
       const newState = { ...state };
 
       newState.botaoClicado = !newState.botaoClicado;
+      console.log('Success!');
 
       return newState;
+    }
+
+    case types.BOTAO_CLICADO_FAILURE: {
+      console.log('Ocorreu erro!');
+
+      return state;
+    }
+
+    case types.BOTAO_CLICADO_REQUEST: {
+      console.log('Estou fazendo uma requisição!');
+
+      return state;
     }
 
     default: {
