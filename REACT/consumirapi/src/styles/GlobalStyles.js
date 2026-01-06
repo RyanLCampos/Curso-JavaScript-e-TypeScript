@@ -21,7 +21,7 @@ export default createGlobalStyle`
 
   body {
     font-family: sans-serif;
-    background: ${colors.primaryDarkColor};
+    background: ${colors.primaryLightColor};
     color: ${colors.primaryDarkColor};
   }
 
@@ -37,6 +37,15 @@ export default createGlobalStyle`
     padding: 10px 20px;
     border-radius: 4px;
     font-weight: 700;
+    border: 2px solid ${colors.primaryColor};
+    transition: all 250ms;
+
+    &:hover {
+      filter: brightness(90%);
+      background: transparent;
+      border: 2px solid ${colors.primaryColor};
+      color: ${colors.primaryColor};
+    }
   }
 
   a {
@@ -62,7 +71,7 @@ export default createGlobalStyle`
 export const Container = styled.section`
   max-width: 480px;
   background: #fff;
-  margin: 30px auto;
+  margin: 50px auto;
   padding: 30px;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
