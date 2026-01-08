@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 import { Nav } from './styled';
 
-export default function Header() {
+export default function HeaderAntigo() {
   return (
     <Nav>
       <Link to="/">

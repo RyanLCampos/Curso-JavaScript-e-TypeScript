@@ -66,6 +66,12 @@ export default createGlobalStyle`
     background: ${colors.errorColor};
     color: #fff;
   }
+
+  h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
 `;
 
 export const Container = styled.section`
