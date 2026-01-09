@@ -21,7 +21,7 @@ export const AlunoContainer = styled.div`
 export const Titulo = styled.h1`
   color: ${colors.primaryDarkColor};
   font-size: 27px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 `;
 
 export const ProfilePicture = styled.div`
@@ -45,7 +45,6 @@ export const StyledButton = styled(Button)`
   background: ${colors.primaryColor};
   color: #fff;
 
-  border: 2px solid #fff;
   transition: all 250ms;
   font-weight: bold;
 

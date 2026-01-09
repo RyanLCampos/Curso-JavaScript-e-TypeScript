@@ -1,45 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Collapse, Typography } from '@material-tailwind/react';
-
 import {
-  StyledNavbar,
-  StyledListItem,
-  StyledButton,
-  StyledTypography,
-  StyledIconButton,
-} from './styled';
+  Button,
+  Collapse,
+  IconButton,
+  Navbar,
+  Typography,
+} from '@material-tailwind/react';
+
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 function NavList() {
+  const buttonBase =
+    'flex items-center bg-neutral-50 text-primary border-2 border-solid border-neutral-50 hover:brightness-90 hover:bg-transparent hover:border-2 hover:border-neutral-50 hover:text-neutral-50';
+
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography className="p-1 font-medium">
         <Link to={'/'}>
-          <StyledListItem className="flex items-center transition-colors">
+          <a className="flex p-2 text-18 text-neutral-50 font-bold items-center hover:underline decoration-neutral-50 decoration-2 underline-offset-4">
             Alunos
-          </StyledListItem>
+          </a>
         </Link>
       </Typography>
       <div className="flex items-center gap-2">
         <Typography className="p-1 font-medium">
           <Link to={'/register'}>
-            <StyledButton
-              className="flex items-center transition-colors"
-              fullWidth
-            >
+            <Button className={buttonBase} fullWidth>
               Cadastre-se
-            </StyledButton>
+            </Button>
           </Link>
         </Typography>
         <Typography className="p-1 font-medium">
           <Link to={'/login'}>
-            <StyledButton
-              className="flex items-center transition-colors"
-              fullWidth
-            >
+            <Button className={buttonBase} fullWidth>
               Entrar
-            </StyledButton>
+            </Button>
           </Link>
         </Typography>
       </div>
@@ -62,22 +58,22 @@ export function HeaderNovo() {
   }, []);
 
   return (
-    <StyledNavbar className="mx-auto max-w-screen-xl px-6 py-3">
+    <Navbar className="bg-primary text-neutral-50 mx-auto mt-3 max-w-screen-lg px-8 py-3 border-none">
       <div className="flex items-center justify-between">
-        <StyledTypography
+        <Typography
           as="a"
           href="#"
-          variant="h6"
+          variant="h4"
           className="mr-4 cursor-pointer py-1.5"
         >
           Consumo API
-        </StyledTypography>
+        </Typography>
         <div className="hidden lg:block">
           <NavList />
         </div>
-        <StyledIconButton
+        <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="bg-primary text-neutral-50 border-none hover:border-none hover:bg-neutral-50 hover:text-primary delay-230 transition-all p-4 ml-auto h-6 w-6 text-inherit lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -86,11 +82,11 @@ export function HeaderNovo() {
           ) : (
             <Bars3Icon className="h-6 w-6" strokeWidth={2} />
           )}
-        </StyledIconButton>
+        </IconButton>
       </div>
       <Collapse open={openNav}>
         <NavList />
       </Collapse>
-    </StyledNavbar>
+    </Navbar>
   );
 }

@@ -9,6 +9,16 @@ export const content = [
   './node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}',
 ];
 export const theme = {
-  extend: {},
+  extend: {
+    colors: {
+      primary: '#C3073F',
+      primaryLight: '#d3d2d2ff',
+      primaryDark: '#1A1A1D',
+      success: '#0197F6',
+      info: '#0197F6',
+      error: '#F2AF29',
+      warning: '#F2AF29',
+    },
+  },
 };
 export const plugins = [];

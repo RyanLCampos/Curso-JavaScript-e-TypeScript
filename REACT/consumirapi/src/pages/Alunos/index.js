@@ -34,11 +34,29 @@ export default function Alunos() {
   }, []);
 
   return (
-    <Container>
+    <>
       <Loading isLoading={isLoading} />
 
-      <div className="relative flex flex-col w-full bg-white shadow-md rounded-xl">
-        <div className="flex items-center justify-between px-6 py-4 border-b">
+      <div
+        className="
+          max-w-[800px]
+          bg-white
+          mx-auto
+          my-[50px]
+          p-[30px]
+          rounded
+          shadow-[0_0_10px_rgba(0,0,0,0.2)]
+        "
+      >
+        <div
+          className="
+            flex
+            items-center
+            justify-between
+            px-6 py-4 border-b
+            max-w-700
+          "
+        >
           <div>
             <Titulo className="text-lg font-semibold text-slate-800">
               Lista de Alunos
@@ -60,17 +78,17 @@ export default function Alunos() {
         </div>
 
         {/* TABLE */}
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto max-h-[400px] overflow-y-auto">
           <table className="w-full text-left table-auto">
             <thead>
               <tr className="bg-slate-50 border-b">
-                <th className="p-4 text-sm font-medium text-slate-500">
+                <th className="p-4 text-sm font-medium text-slate-500 sticky top-0 bg-slate-50 z-10">
                   Aluno
                 </th>
-                <th className="p-4 text-sm font-medium text-slate-500">
+                <th className="p-4 text-sm font-medium text-slate-500 sticky top-0 bg-slate-50 z-10">
                   Email
                 </th>
-                <th className="p-4 text-sm font-medium text-slate-500">
+                <th className="p-4 text-sm font-medium text-slate-500 sticky top-0 bg-slate-50 z-10">
                   Ações
                 </th>
               </tr>
@@ -94,7 +112,7 @@ export default function Alunos() {
                       </ProfilePicture>
 
                       <div>
-                        <p className="text-sm font-semibold text-slate-700">
+                        <p className="text-sm font-semibold text-slate-700 text-primaryDark">
                           {aluno.nome} {aluno.sobrenome}
                         </p>
                       </div>
@@ -109,14 +127,17 @@ export default function Alunos() {
                         to={`/aluno/${aluno.id}/edit`}
                         className="p-2 rounded hover:bg-slate-200"
                       >
-                        <FaEdit />
+                        <FaEdit size={20} className="hover:text-primaryDark" />
                       </Link>
 
                       <Link
                         to={`/aluno/${aluno.id}/delete`}
                         className="p-2 rounded hover:bg-red-100 text-red-600"
                       >
-                        <FaWindowClose />
+                        <FaWindowClose
+                          size={20}
+                          className="hover:text-primaryDark"
+                        />
                       </Link>
                     </div>
                   </td>
@@ -134,6 +155,6 @@ export default function Alunos() {
           </table>
         </div>
       </div>
-    </Container>
+    </>
   );
 }
